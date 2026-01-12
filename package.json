@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "node --test dist/tests/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,5 @@
     "@types/node": "^25.0.6",
     "biome": "^0.3.3",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "jest": "^30.2.0"
   }
 }
