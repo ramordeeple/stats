@@ -1,0 +1,27 @@
+{
+  "name": "stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramordeeple/stats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ramordeeple/stats/issues"
+  },
+  "homepage": "https://github.com/ramordeeple/stats#readme",
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@types/node": "^25.0.6",
+    "biome": "^0.3.3",
+    "typescript": "^5.9.3"
+  }
+}
