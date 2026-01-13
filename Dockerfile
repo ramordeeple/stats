@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -7,10 +7,14 @@ RUN npm ci
 
 COPY tsconfig.json biome.json ./
 COPY src ./src
-COPY tests ./tests
+
 RUN npm run build
 
 
-RUN npm prune --omit=dev
+FROM node:24-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
 
 ENTRYPOINT ["node", "dist/index.js"]
